@@ -2,7 +2,7 @@ module "key" {
   count = var.instance.keypair_name == null ? 1 : 0
 
   source  = "app.terraform.io/aedificans/Base-EC2-KeyPair/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   environment                                = var.environment
   naming                                     = var.naming

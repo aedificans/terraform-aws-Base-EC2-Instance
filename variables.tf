@@ -42,6 +42,7 @@ variable "tagging" {
     organization    = string
     owner           = string
     service_pattern = string
+    service_name    = optional(string, null)
     tag_key_prefix  = string
   })
 }

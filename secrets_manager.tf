@@ -2,7 +2,7 @@ module "credentials" {
   count = var.instance.get_password_data ? 1 : 0
 
   source  = "app.terraform.io/aedificans/Base-SecretsManager-Secret/aws"
-  version = "1.0.0"
+  version = "1.0.3"
 
   environment = var.environment
   naming      = var.naming

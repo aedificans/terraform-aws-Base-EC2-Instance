@@ -25,7 +25,7 @@ locals {
       "${var.tagging.tag_key_prefix}:network"         = var.tagging.network
       "${var.tagging.tag_key_prefix}:organization"    = var.tagging.organization
       "${var.tagging.tag_key_prefix}:resource:owner"  = var.tagging.owner
-      "${var.tagging.tag_key_prefix}:service:name"    = var.naming.display
+      "${var.tagging.tag_key_prefix}:service:name"    = coalesce(var.tagging.service_name, var.naming.display)
       "${var.tagging.tag_key_prefix}:service:pattern" = var.tagging.service_pattern
     })
   )
